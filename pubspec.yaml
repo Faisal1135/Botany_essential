@@ -1,0 +1,46 @@
+name: botany_essential
+description: This is essential tool for botany
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  animated_text_kit: ^3.1.0
+  cupertino_icons: ^1.0.0
+  drawing_animation: ^0.1.4
+  flutter_riverpod: ^0.12.1
+  font_awesome_flutter: ^8.11.0
+  getwidget: ^1.2.4
+  hive: ^1.4.4+1
+  hive_flutter: ^0.3.1
+  uuid: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/json/
+    - assets/images/
+
+  fonts:
+    - family: Alegreya
+      fonts:
+        - asset: assets/fonts/Alegreya-Regular.ttf
+        - asset: assets/fonts/Alegreya-Italic.ttf
+          style: italic
+    - family: ZillaSlab
+      fonts:
+        - asset: assets/fonts/ZillaSlab-Italic.ttf
+        - asset: assets/fonts/ZillaSlab-Bold.ttf
+        - asset: assets/fonts/ZillaSlab-Regular.ttf
+          weight: 700
