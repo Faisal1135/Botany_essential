@@ -1,3 +1,6 @@
+import 'package:botany_essential/riverpod/providers.dart';
+import 'package:flutter_riverpod/all.dart';
+
 import '../screens/homepage.dart';
 import '../screens/main_home-page.dart';
 import 'package:flutter/material.dart';
@@ -5,13 +8,22 @@ import '../screens/alpha_list.dart';
 import '../screens/history_screen.dart';
 import '../screens/favorite_page.dart';
 
-class AppDrawer extends StatelessWidget {
+class AppDrawer extends ConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ScopedReader watch) {
+    final isLight = watch(themeProvider).state;
     return Drawer(
       child: ListView(
         children: <Widget>[
           _createHeader(),
+          SwitchListTile(
+            value: !isLight,
+            secondary: Icon(Icons.lightbulb),
+            onChanged: (_) {
+              context.read(themeProvider).state = !isLight;
+            },
+            title: Text('Dark Theme'),
+          ),
           _createDrawerItem(
             icon: Icons.home,
             text: "Home",

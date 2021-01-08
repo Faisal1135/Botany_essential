@@ -72,7 +72,8 @@ class DictItemScreen extends StatelessWidget {
                             child: FittedBox(
                               child: Text(
                                 dict.term,
-                                style: ktermTextStyle,
+                                style: ktermTextStyle.copyWith(
+                                    color: Colors.white),
                               ),
                             ),
                           ),
@@ -157,7 +158,8 @@ class DictItemScreen extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   'Meaning',
-                                  style: kMeaningStyle,
+                                  style: kMeaningStyle.copyWith(
+                                      color: Colors.white),
                                   textAlign: TextAlign.start,
                                 ),
                                 Divider(
@@ -169,7 +171,8 @@ class DictItemScreen extends StatelessWidget {
                                 ),
                                 Text(
                                   dict.meaning,
-                                  style: kMeaningStyle,
+                                  style: kMeaningStyle.copyWith(
+                                      color: Colors.white),
                                   textAlign: TextAlign.justify,
                                 ),
                               ],

@@ -5,12 +5,8 @@ import 'package:flutter/material.dart';
 import '../screens/main_home-page.dart';
 
 class SplashWidget extends StatelessWidget {
-  final Function toogle;
-  final bool isLight;
   const SplashWidget({
     Key key,
-    this.toogle,
-    this.isLight,
   }) : super(key: key);
 
   @override
@@ -35,8 +31,9 @@ class SplashWidget extends StatelessWidget {
             run: true,
             duration: Duration(seconds: 3),
             onFinish: () => Navigator.pushReplacementNamed(
-                context, MainHomePage.routeName,
-                arguments: [toogle, isLight]),
+              context,
+              MainHomePage.routeName,
+            ),
           ),
         )
       ],

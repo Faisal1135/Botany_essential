@@ -1,6 +1,8 @@
 import 'dart:math';
 
+import 'package:botany_essential/riverpod/providers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/all.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -12,24 +14,10 @@ import '../screens/history_screen.dart';
 import '../screens/search_bar.dart';
 import '../widgets/my_drawer.dart';
 
-class MainHomePage extends StatefulWidget {
-  static const routeName = "/Main-Home-Page";
-
-  const MainHomePage({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  _MainHomePageState createState() => _MainHomePageState();
-}
-
-class _MainHomePageState extends State<MainHomePage> {
-  bool isLight = true;
+class MainHomePage extends StatelessWidget {
+  static const routeName = 'Main Home Page';
   @override
   Widget build(BuildContext context) {
-    final args = ModalRoute.of(context).settings.arguments as List;
-    final toogle = args.first;
-
     return Scaffold(
       backgroundColor: Theme.of(context).canvasColor,
       appBar: AppBar(
@@ -41,16 +29,6 @@ class _MainHomePageState extends State<MainHomePage> {
             style: ktermTextStyle,
           ),
         ),
-        actions: [
-          Switch(
-              value: isLight,
-              onChanged: (state) {
-                setState(() {
-                  isLight = !isLight;
-                  toogle();
-                });
-              })
-        ],
       ),
       drawer: AppDrawer(),
       body: ValueListenableBuilder(
