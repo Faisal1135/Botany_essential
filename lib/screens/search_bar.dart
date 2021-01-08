@@ -69,7 +69,11 @@ class Searchbar extends SearchDelegate<String> {
     // implement buildSuggestions
     final searchlist = Hive.box<Botmodel>(kbotBox)
         .values
-        .where((bot) => bot.term.toLowerCase().startsWith(query.toLowerCase()))
+        .where(
+          (bot) => bot.term.toLowerCase().startsWith(
+                query.toLowerCase(),
+              ),
+        )
         .toList();
 
     return query.isEmpty

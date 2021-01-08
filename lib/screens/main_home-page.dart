@@ -1,12 +1,9 @@
 import 'dart:math';
 
-import 'package:botany_essential/riverpod/providers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/all.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
 import '../constant.dart';
 import '../models/botmodel.dart';
 import '../screens/dictonary_details.dart';

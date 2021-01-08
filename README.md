@@ -1,6 +1,6 @@
-# botany_essential
+# Botany Essential
 
-This is essential tool for botany 
+This is essential tool for botany student
 
 ## Getting Started
 
