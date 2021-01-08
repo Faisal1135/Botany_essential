@@ -103,7 +103,7 @@ class Searchbar extends SearchDelegate<String> {
                   text: TextSpan(
                     text: searchlist[index].term.substring(0, query.length),
                     style: TextStyle(
-                        color: Colors.black,
+                        color: Theme.of(context).accentColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
                         fontFamily: "Alegreya"),

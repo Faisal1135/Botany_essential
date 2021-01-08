@@ -35,7 +35,12 @@ class MyApp extends ConsumerWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Botany Essential',
-      theme: isLight ? kLightTheme : ThemeData.dark(),
+      theme: isLight
+          ? kLightTheme
+          : ThemeData.dark().copyWith(
+              textTheme: ThemeData.dark()
+                  .textTheme
+                  .copyWith(headline6: TextStyle(color: Colors.black))),
       home: getMetaData() ? MainScreen() : SplashScreen(),
       routes: {
         Homepage.routeName: (context) => Homepage(),
