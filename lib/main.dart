@@ -1,4 +1,5 @@
 import 'package:botany_essential/riverpod/providers.dart';
+import 'package:botany_essential/screens/flower_ditection.dart';
 import 'package:flutter_riverpod/all.dart';
 
 import './screens/splash_screen.dart';
@@ -52,6 +53,7 @@ class MyApp extends ConsumerWidget {
         DictItemScreen.routeName: (context) => DictItemScreen(),
         HistoryPage.routeName: (context) => HistoryPage(),
         MainHomePage.routeName: (context) => MainHomePage(),
+        FlowerRecognizer.routeName: (context) => FlowerRecognizer(),
       },
     );
   }

@@ -1,4 +1,5 @@
 import 'package:botany_essential/riverpod/providers.dart';
+import 'package:botany_essential/screens/flower_ditection.dart';
 import 'package:flutter_riverpod/all.dart';
 
 import '../screens/homepage.dart';
@@ -53,6 +54,12 @@ class AppDrawer extends ConsumerWidget {
             text: "History",
             onTap: () =>
                 Navigator.pushReplacementNamed(context, HistoryPage.routeName),
+          ),
+          _createDrawerItem(
+            icon: Icons.eco,
+            text: "Flower identification",
+            onTap: () => Navigator.pushReplacementNamed(
+                context, FlowerRecognizer.routeName),
           ),
         ],
       ),
